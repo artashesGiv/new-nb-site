@@ -19,12 +19,11 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.4.0",
-    "@formkit/auto-animate": "^0.8.2",
     "@nuxt/icon": "^1.10.3",
     "@nuxtjs/google-fonts": "^3.2.0",
-    "@nuxtjs/tailwindcss": "^6.13.1",
     "@vee-validate/nuxt": "^4.15.0",
     "@vueuse/nuxt": "^12.7.0",
-    "prettier": "^3.5.3"
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11"
   }
 }

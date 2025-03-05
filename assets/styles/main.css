@@ -1,7 +1,57 @@
 @import 'tailwindcss';
 
 body {
-  @apply bg-gray-200;
+  @apply bg-gray-400 text-main-black relative;
 
   font-family: 'Inter', sans-serif;
+}
+
+@theme {
+  --color-main-black: #1b1b1b;
+  --color-main-blue: #29007f;
+  --color-main-orange: #db6a19;
+  --color-main-white: #fff;
+  --color-main-critical: #dc3545;
+
+  --color-main-gray: #a5b4ca;
+  --color-secondary-gray: #e5e9f0;
+  --color-dark-gray: #5a79ad;
+
+  --main-gradient: linear-gradient(90deg, #db6a19 0%, #29007f 100%);
+  --light-gradient: linear-gradient(
+          90deg,
+          #e5e9f0 0%,
+          #ffffff 50%,
+          #e5e9f0 100%
+  );
+
+  --shadow-base: 0 8px 16px 0 #1b1b1b33;
+}
+
+@utility button {
+  @apply w-full h-[56px] md:h-[80px] xl:h-[96px] px-[64px] rounded-[8px] md:rounded-[16px] text-[20px] md:text-[28px] whitespace-nowrap cursor-pointer transition-colors transition-base;
+}
+
+@utility section-container {
+  @apply px-[18px] md:px-[32px] xl:px-[64px];
+}
+
+@utility button-primary {
+  @apply button bg-main-orange text-white hover:shadow-base transition-shadow;
+}
+
+@utility button-secondary {
+  @apply button bg-main-white text-main-black hover:bg-main-orange hover:text-main-white ;
+}
+
+@utility transition-base {
+  @apply duration-300;
+}
+
+@utility section-container {
+  @apply px-[18px] md:px-[32px] xl:px-[64px];
+}
+
+@utility hero-title {
+ @apply text-main-white text-[32px] md:text-[64px] xl:text-[80px] font-bold hover:text-main-orange hover:translate-x-10 transition-base;
 }

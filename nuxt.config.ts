@@ -5,7 +5,8 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  css: ['~/assets/styles/main.css'],
+  css: ['~/assets/styles/main.css', '~/assets/styles/animations.css'],
+  ssr: false,
 
   vite: {
     plugins: [tailwindcss()],
@@ -13,7 +14,6 @@ export default defineNuxtConfig({
 
   modules: [
     '@vueuse/nuxt',
-    '@formkit/auto-animate',
     '@nuxt/icon',
     '@nuxtjs/google-fonts',
     '@vee-validate/nuxt',
