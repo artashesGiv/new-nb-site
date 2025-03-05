@@ -1,0 +1,37 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
+
+import tailwindcss from '@tailwindcss/vite'
+
+export default defineNuxtConfig({
+  compatibilityDate: '2024-11-01',
+  devtools: { enabled: true },
+  css: ['~/assets/styles/main.css'],
+
+  vite: {
+    plugins: [tailwindcss()],
+  },
+
+  modules: [
+    '@vueuse/nuxt',
+    '@formkit/auto-animate',
+    '@nuxt/icon',
+    '@nuxtjs/google-fonts',
+    '@vee-validate/nuxt',
+    '@nuxt/image',
+  ],
+
+  icon: {
+    customCollections: [
+      {
+        prefix: 'icons',
+        dir: './static/icons',
+      },
+    ],
+  },
+
+  googleFonts: {
+    families: {
+      Inter: '200..700',
+    },
+  },
+})
