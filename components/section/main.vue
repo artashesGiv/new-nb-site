@@ -1,6 +1,6 @@
 <template>
   <section
-    class="main-section relative flex h-max min-h-max items-center overflow-hidden md:h-[calc(100vh-121.86px)] xl:h-[calc(100vh-172.25px)]"
+    class="main-section relative flex max-h-max min-h-max items-center overflow-hidden pt-[109.3px] md:h-[calc(100vh-121.86px)] md:pt-[121.86px] xl:h-[calc(100vh-172.25px)] xl:pt-[172.25px]"
   >
     <div
       class="section-container relative z-10 flex w-full flex-col justify-between gap-[40px] py-[58px] text-white lg:flex-row lg:gap-[20px] lg:py-[100px]"

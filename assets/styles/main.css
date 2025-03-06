@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 body {
-  @apply bg-gray-400 text-main-black relative;
+  @apply bg-main-white text-main-black relative;
 
   font-family: 'Inter', sans-serif;
 }
@@ -19,17 +19,17 @@ body {
 
   --main-gradient: linear-gradient(90deg, #db6a19 0%, #29007f 100%);
   --light-gradient: linear-gradient(
-          90deg,
-          #e5e9f0 0%,
-          #ffffff 50%,
-          #e5e9f0 100%
+    90deg,
+    #e5e9f0 0%,
+    #ffffff 50%,
+    #e5e9f0 100%
   );
 
   --shadow-base: 0 8px 16px 0 #1b1b1b33;
 }
 
 @utility button {
-  @apply w-full h-[56px] md:h-[80px] xl:h-[96px] px-[64px] rounded-[8px] md:rounded-[16px] text-[20px] md:text-[28px] whitespace-nowrap cursor-pointer transition-colors transition-base;
+  @apply transition-base h-[56px] w-full cursor-pointer rounded-[8px] px-[64px] text-[20px] whitespace-nowrap transition-colors md:h-[80px] md:rounded-[16px] md:text-[28px] xl:h-[96px];
 }
 
 @utility section-container {
@@ -37,11 +37,11 @@ body {
 }
 
 @utility button-primary {
-  @apply button bg-main-orange text-white hover:shadow-base transition-shadow;
+  @apply button bg-main-orange hover:shadow-base text-white transition-shadow;
 }
 
 @utility button-secondary {
-  @apply button bg-main-white text-main-black hover:bg-main-orange hover:text-main-white ;
+  @apply button bg-main-white text-main-black hover:bg-main-orange hover:text-main-white;
 }
 
 @utility transition-base {
@@ -53,5 +53,5 @@ body {
 }
 
 @utility hero-title {
- @apply text-main-white text-[32px] md:text-[64px] xl:text-[80px] font-bold hover:text-main-orange hover:translate-x-10 transition-base;
+  @apply text-main-white hover:text-main-orange transition-base text-[32px] font-bold hover:translate-x-10 md:text-[64px] xl:text-[80px];
 }

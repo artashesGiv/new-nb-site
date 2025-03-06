@@ -1,19 +1,19 @@
 <template>
   <header
-    class="section-container flex justify-between rounded-b-[16px] py-[40px] md:rounded-none xl:py-[53.5px] shadow-base md:shadow-none bg-white"
+    class="section-container shadow-base flex justify-between rounded-b-[16px] bg-white py-[40px] md:rounded-none md:shadow-none xl:py-[53.5px]"
   >
     <logo />
-    <ul class="hidden md:flex items-center gap-[60px] xl:gap-[108px]">
+    <ul class="hidden items-center gap-[60px] md:flex xl:gap-[108px]">
       <li
         v-for="link in links"
         :key="link"
-        class="text-[20px] xl:text-[28px] cursor-pointer hover:text-main-orange transition-colors transition-base"
+        class="hover:text-main-orange transition-base cursor-pointer text-[20px] transition-colors xl:text-[28px]"
       >
         {{ link }}
       </li>
     </ul>
     <div
-      class="flex items-center cursor-pointer md:hidden"
+      class="flex cursor-pointer items-center md:hidden"
       @click="onToggleMenu(true)"
     >
       <icon name="icons:burger" class="text-dark-gray text-[20px]" />
@@ -23,7 +23,7 @@
         <div
           v-if="isOpenMenu"
           ref="target"
-          class="absolute inset-x-0 top-0 w-full z-50 md:hidden"
+          class="absolute inset-x-0 top-0 z-50 w-full md:hidden"
         >
           <mobile-menu :links="links" />
         </div>
