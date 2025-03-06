@@ -1,30 +1,44 @@
 <template>
   <div
-    class="relative px-[18px] py-[24px] rounded-b-[16px] bg-white shadow-base"
+    class="shadow-base relative rounded-b-[16px] bg-white px-[18px] py-[24px]"
   >
     <ul class="flex flex-col items-center gap-[8px]">
       <li
         v-for="link in links"
-        :key="link"
-        class="cursor-pointer text-[24px] py-[10px] hover:text-main-orange transition-colors transition-base"
+        :key="link.id"
+        class="hover:text-main-orange transition-base cursor-pointer py-[10px] text-[24px] transition-colors"
+        @click="onScroll(link.id)"
       >
-        {{ link }}
+        {{ link.title }}
       </li>
     </ul>
     <img
       src="/images/header-mobile-decorator.png"
       alt="decorator"
-      class="absolute inset-x-0 bottom-0 select-none pointer-events-none"
+      class="pointer-events-none absolute inset-x-0 bottom-0 select-none"
     />
   </div>
 </template>
 
 <script setup lang="ts">
 export type MobileMenuProps = {
-  links?: string[]
+  links: { title: string; id: string }[]
+}
+
+type Emits = {
+  (e: 'close'): void
 }
 
 defineProps<MobileMenuProps>()
+
+const { scrollTo } = useSmoothScroll()
+
+const emit = defineEmits<Emits>()
+
+const onScroll = (id: string) => {
+  scrollTo(id)
+  emit('close')
+}
 </script>
 
 <style scoped></style>

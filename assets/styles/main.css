@@ -48,10 +48,6 @@ body {
   @apply duration-300;
 }
 
-@utility section-container {
-  @apply px-[18px] md:px-[32px] xl:px-[64px];
-}
-
 @utility hero-title {
   @apply text-main-white hover:text-main-orange transition-base text-[32px] font-black hover:translate-x-10 md:text-[64px] xl:text-[80px];
 }
@@ -69,9 +65,17 @@ body {
 }
 
 @utility my-text-s {
-  @apply text-main-black text-[16px] font-bold md:text-[20px] xl:text-[24px];
+  @apply text-main-black text-[16px] md:text-[20px] xl:text-[24px];
+}
+
+@utility section-container {
+  @apply px-[18px] md:px-[32px] xl:px-[64px];
 }
 
 @utility section-space {
   @apply mt-[24px] md:mt-[64px] xl:mt-[124px];
+}
+
+@utility section-content {
+  @apply flex flex-col gap-[16px] lg:gap-[32px];
 }

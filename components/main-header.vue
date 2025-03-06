@@ -6,10 +6,11 @@
     <ul class="hidden items-center gap-[60px] md:flex xl:gap-[108px]">
       <li
         v-for="link in links"
-        :key="link"
+        :key="link.id"
         class="hover:text-main-orange transition-base cursor-pointer text-[20px] transition-colors xl:text-[28px]"
+        @click="scrollTo(link.id)"
       >
-        {{ link }}
+        {{ link.title }}
       </li>
     </ul>
     <div
@@ -25,7 +26,7 @@
           ref="target"
           class="absolute inset-x-0 top-0 z-50 w-full md:hidden"
         >
-          <mobile-menu :links="links" />
+          <mobile-menu :links="links" @close="onToggleMenu(false)" />
         </div>
       </transition>
     </teleport>
@@ -33,7 +34,12 @@
 </template>
 
 <script setup lang="ts">
-const links = ref(['О компании', 'Услуги', 'Проекты', 'Контакты'])
+const links: { title: string; id: string }[] = [
+  { title: 'О компании', id: 'about' },
+  { title: 'Услуги', id: 'services' },
+  { title: 'Проекты', id: 'projects' },
+  { title: 'Контакты', id: 'contacts' },
+]
 
 const isOpenMenu = ref(false)
 const onToggleMenu = (value: boolean) => {
@@ -43,6 +49,8 @@ const onToggleMenu = (value: boolean) => {
 const target = useTemplateRef<HTMLElement>('target')
 
 onClickOutside(target, () => onToggleMenu(false))
+
+const { scrollTo } = useSmoothScroll()
 </script>
 
 <style scoped></style>

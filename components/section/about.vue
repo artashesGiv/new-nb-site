@@ -1,8 +1,9 @@
 <template>
   <section
-    class="section-container flex flex-col gap-[24px] lg:flex-row lg:gap-[32px]"
+    id="about"
+    class="section-container flex flex-col gap-[24px] overflow-hidden lg:flex-row lg:gap-[32px]"
   >
-    <div class="flex flex-col gap-[32px] lg:w-1/2">
+    <div class="section-content lg:w-1/2">
       <h3 class="my-text-xl">Команда NEW BRAND</h3>
       <p class="my-text-l">
         Это 50+ высококлассных специалистов, имеющих более 17 лет опыта
@@ -17,7 +18,7 @@
     </div>
     <img
       class="scale-x-125 object-cover lg:w-1/2 lg:scale-x-100 lg:rounded-[16px]"
-      src="/images/team-decor.jpg"
+      src="/images/team/banner.jpg"
       alt="team-decor"
     />
   </section>

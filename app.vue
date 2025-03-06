@@ -4,7 +4,8 @@
     :class="{ '-translate-y-full': !isVisible }"
   />
   <section-main />
-  <section-team class="section-space" />
+  <section-about class="section-space" />
+  <section-services class="section-space" />
   <div class="section-space" />
 </template>
 
