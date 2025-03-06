@@ -53,5 +53,25 @@ body {
 }
 
 @utility hero-title {
-  @apply text-main-white hover:text-main-orange transition-base text-[32px] font-bold hover:translate-x-10 md:text-[64px] xl:text-[80px];
+  @apply text-main-white hover:text-main-orange transition-base text-[32px] font-black hover:translate-x-10 md:text-[64px] xl:text-[80px];
+}
+
+@utility my-text-xl {
+  @apply text-main-black text-[28px] font-bold md:text-[32px] xl:text-[48px];
+}
+
+@utility my-text-l {
+  @apply text-main-black text-[16px] font-semibold md:text-[24px] xl:text-[32px];
+}
+
+@utility my-text-m {
+  @apply text-main-black text-[16px] md:text-[20px] xl:text-[28px];
+}
+
+@utility my-text-s {
+  @apply text-main-black text-[16px] font-bold md:text-[20px] xl:text-[24px];
+}
+
+@utility section-space {
+  @apply mt-[24px] md:mt-[64px] xl:mt-[124px];
 }

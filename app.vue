@@ -4,6 +4,8 @@
     :class="{ '-translate-y-full': !isVisible }"
   />
   <section-main />
+  <section-team class="section-space" />
+  <div class="section-space" />
 </template>
 
 <script setup>

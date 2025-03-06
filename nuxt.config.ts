@@ -31,7 +31,7 @@ export default defineNuxtConfig({
 
   googleFonts: {
     families: {
-      Inter: '200..700',
+      'Nunito Sans': '200..700',
     },
   },
 })
