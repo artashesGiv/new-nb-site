@@ -6,6 +6,7 @@
   <section-main />
   <section-about class="section-space" />
   <section-services class="section-space" />
+  <section-technologies class="section-space" />
   <div class="section-space" />
 </template>
 

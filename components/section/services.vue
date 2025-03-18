@@ -1,5 +1,5 @@
 <template>
-  <section id="services" class="section-container section-content">
+  <section id="services" class="section-container section-content overflow-hidden">
     <h3 class="my-text-xl">Наши услуги</h3>
 
     <div class="grid grid-cols-1 gap-[32px] xl:grid-cols-2 2xl:grid-cols-3">
@@ -7,6 +7,7 @@
         <p v-for="item in card.content" :key="item">{{ item }}</p>
       </ui-card-collapse>
     </div>
+    <img src="/images/main-bg.png" alt="bg" class="absolute z-[-1] hidden md:block"/>
   </section>
 </template>
 
