@@ -5,8 +5,10 @@
   />
   <section-main />
   <section-about class="section-space" />
+  <section-partners class="section-space" />
   <section-services class="section-space" />
   <section-technologies class="section-space" />
+  <section-projects class="section-space" />
   <div class="section-space" />
 </template>
 

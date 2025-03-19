@@ -79,3 +79,7 @@ body {
 @utility section-content {
   @apply flex flex-col gap-[16px] lg:gap-[32px];
 }
+
+@utility card-base {
+  @apply basis-[400px] grow h-[100px] md:h-[180px];
+}
