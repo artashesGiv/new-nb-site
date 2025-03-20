@@ -1,0 +1,6 @@
+node_modules/
+public/
+*.min.css
+*.svg
+README.md
+assets/styles/icons.css

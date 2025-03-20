@@ -1,7 +1,11 @@
 <template>
-  <form @submit.prevent="onSubmit" class="space-y-3 rounded-lg border p-4">
-    <h3 class="text-2xl">{{ schema.title }}</h3>
-    <p class="text-gray-600">{{ schema.description }}</p>
+  <form class="space-y-3 rounded-lg border p-4" @submit.prevent="onSubmit">
+    <h3 class="text-2xl">
+      {{ schema.title }}
+    </h3>
+    <p class="text-gray-600">
+      {{ schema.description }}
+    </p>
     <div
       v-for="(config, key) in schema.properties"
       :key="key"
@@ -14,8 +18,8 @@
       <!-- Текстовые поля -->
       <input
         v-if="config.type === 'text' || config.type === 'number'"
-        v-model="formData[key]"
         :id="key"
+        v-model="formData[key]"
         :type="config.type"
         :placeholder="config.placeholder"
         class="rounded-md border p-2"
@@ -26,7 +30,7 @@
         v-else-if="config.type === 'checkbox'"
         class="flex items-center gap-2"
       >
-        <input v-model="formData[key]" :id="key" type="checkbox" />
+        <input :id="key" v-model="formData[key]" type="checkbox" />
         <label :for="key">{{ config.label }}</label>
       </div>
 
@@ -54,7 +58,9 @@
       </select>
 
       <!-- Ошибки -->
-      <p v-if="errors[key]" class="text-sm text-red-500">{{ errors[key] }}</p>
+      <p v-if="errors[key]" class="text-sm text-red-500">
+        {{ errors[key] }}
+      </p>
       <p v-if="config.description" class="text-xs text-gray-500">
         {{ config.description }}
       </p>
@@ -66,8 +72,8 @@
       </button>
       <button
         type="button"
-        @click="onReset"
         class="rounded-md bg-gray-300 px-4 py-2"
+        @click="onReset"
       >
         Очистить
       </button>
@@ -76,9 +82,9 @@
 </template>
 
 <script setup lang="ts">
+import type { JSONSchema } from '~/types/jsonschema'
 import { computed, defineProps, reactive, ref } from 'vue'
 import * as yup from 'yup'
-import type { JSONSchema } from '~/types/jsonschema'
 
 export type DynamicFormProps = {
   schema: JSONSchema
@@ -119,16 +125,16 @@ const validationSchema = computed(() => {
     } else {
       rule = yup.string()
       if (config.type === 'number')
-        rule = yup.number().typeError('Должно быть числом')
+      { rule = yup.number().typeError('Должно быть числом') }
       if (config.format === 'email')
-        rule = yup.string().email('Некорректный email')
+      { rule = yup.string().email('Некорректный email') }
       if (config.minLength)
-        rule = rule.min(
-          config.minLength,
-          `Минимум ${config.minLength} символов`,
-        )
+      { rule = rule.min(
+        config.minLength,
+        `Минимум ${config.minLength} символов`,
+      ) }
       if (props.schema.required.includes(key))
-        rule = rule.required('Обязательное поле')
+      { rule = rule.required('Обязательное поле') }
     }
 
     // зависимая валидация

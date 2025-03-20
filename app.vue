@@ -8,12 +8,14 @@
   <section-partners class="section-space" />
   <section-services class="section-space" />
   <section-technologies class="section-space" />
-  <section-projects class="section-space" />
+  <section-projects class="section-space mb-[48px] md:mb-[124px]" />
   <div class="section-space" />
+  <MainFooter class="section-space mb-[48px] md:mb-[124px]" />
 </template>
 
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue'
+import MainFooter from '~/components/main-footer.vue'
 
 const isVisible = ref(true)
 let lastScroll = 0

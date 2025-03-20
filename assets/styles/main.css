@@ -18,12 +18,7 @@ body {
   --color-dark-gray: #5a79ad;
 
   --main-gradient: linear-gradient(90deg, #db6a19 0%, #29007f 100%);
-  --light-gradient: linear-gradient(
-    90deg,
-    #e5e9f0 0%,
-    #ffffff 50%,
-    #e5e9f0 100%
-  );
+  --light-gradient: linear-gradient(90deg, #e5e9f0 0%, #ffffff 50%, #e5e9f0 100%);
 
   --shadow-base: 0 8px 16px 0 #1b1b1b33;
 }

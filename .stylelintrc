@@ -1,0 +1,33 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-recommended-vue/scss"
+  ],
+  "plugins": [
+    "stylelint-scss",
+    "stylelint-order"
+  ],
+  "rules": {
+    "scss/at-rule-no-unknown": true,
+    "at-rule-no-unknown": null,
+    "font-family-name-quotes": "always-where-recommended",
+    "import-notation": "string",
+    "order/properties-order": [
+      "position",
+      "top",
+      "right",
+      "bottom",
+      "left",
+      "display",
+      "width",
+      "height"
+    ],
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "ignore": ["after-comment"],
+        "ignoreAtRules": ["import","else", "include"]
+      }
+    ]
+  }
+}

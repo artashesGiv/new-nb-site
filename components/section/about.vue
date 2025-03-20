@@ -4,7 +4,9 @@
     class="section-container flex flex-col gap-[24px] overflow-hidden lg:flex-row lg:gap-[32px]"
   >
     <div class="section-content lg:w-1/2">
-      <h3 class="my-text-xl">Команда NEW BRAND</h3>
+      <h3 class="my-text-xl">
+        Команда NEW BRAND
+      </h3>
       <p class="my-text-l">
         Это 50+ высококлассных специалистов, имеющих более 17 лет опыта
         в разработке программных продуктов «под ключ».

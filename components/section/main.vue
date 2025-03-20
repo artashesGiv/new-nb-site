@@ -7,9 +7,15 @@
     >
       <div class="flex flex-col gap-[56px] lg:w-1/2">
         <div>
-          <h2 class="hero-title">Анализируем</h2>
-          <h2 class="hero-title">Создаем</h2>
-          <h2 class="hero-title">Масштабируем</h2>
+          <h2 class="hero-title">
+            Анализируем
+          </h2>
+          <h2 class="hero-title">
+            Создаем
+          </h2>
+          <h2 class="hero-title">
+            Масштабируем
+          </h2>
         </div>
         <div class="max-w-[560px] text-[16px] md:text-[32px] lg:max-w-[760px]">
           New Brand предлагает широкий спектр услуг в области

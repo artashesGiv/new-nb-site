@@ -31,9 +31,9 @@ type Emits = {
 
 defineProps<MobileMenuProps>()
 
-const { scrollTo } = useSmoothScroll()
-
 const emit = defineEmits<Emits>()
+
+const { scrollTo } = useSmoothScroll()
 
 const onScroll = (id: string) => {
   scrollTo(id)

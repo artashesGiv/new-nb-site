@@ -1,7 +1,7 @@
 <template>
-  <div :class="'flex justify-center items-center relative rounded-2xl p-[32px] border border-main-gray ' + bg">
-    <slot/>
-    <a v-if="href" :href="href" target='_blank' class='absolute top-0 left-0 w-full h-full' />
+  <div :class="`flex justify-center items-center relative rounded-2xl p-[16px] md:p-[32px] border border-main-gray ${bg}`">
+    <slot />
+    <a v-if="href" :href="href" target="_blank" class="absolute top-0 left-0 w-full h-full" />
   </div>
 </template>
 

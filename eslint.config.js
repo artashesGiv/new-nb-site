@@ -17,14 +17,6 @@ export default antfu({
       },
     ],
     'style/arrow-parens': ['error', 'as-needed'],
-    'vue/component-name-in-template-casing': [
-      'error',
-      'kebab-case',
-      {
-        registeredComponentsOnly: false,
-        ignores: [],
-      },
-    ],
     'vue/html-self-closing': [
       'error',
       {
@@ -38,10 +30,13 @@ export default antfu({
       },
     ],
     '@typescript-eslint/consistent-type-definitions': 'off',
+    'style/member-delimiter-style': 'off',
     'style/operator-linebreak': 'off',
     'style/brace-style': 'off',
     'node/prefer-global/process': 'off',
     'no-console': 'off',
+    'vue/custom-event-name-casing': ['error', 'kebab-case'],
     'vue/valid-v-slot': 'off',
+    'ts/no-namespace': 'off',
   },
 })

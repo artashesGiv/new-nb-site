@@ -22,7 +22,7 @@
     <div
       ref="contentRef"
       class="my-text-s transition-base self-start overflow-hidden transition-[max-height]"
-      :style="{ maxHeight: isOpen ? contentHeight + 'px' : '0px' }"
+      :style="{ maxHeight: isOpen ? `${contentHeight}px` : '0px' }"
     >
       <div class="mt-[24px]">
         <slot />
@@ -34,6 +34,7 @@
 <script setup lang="ts">
 import { nextTick, onMounted, ref } from 'vue'
 
+defineProps<CardCollapseProps>()
 const isOpen = ref(false)
 const contentRef = ref<HTMLElement | null>(null)
 const contentHeight = ref(0)
@@ -50,8 +51,6 @@ export type CardCollapseProps = {
   srcIcon: string
   title: string
 }
-
-defineProps<CardCollapseProps>()
 
 const isLg = useMediaQuery('(min-width: 1024px)')
 const iconSize = computed(() => (isLg.value ? '40px' : '28px'))
