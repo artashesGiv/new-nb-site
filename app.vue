@@ -11,6 +11,7 @@
   <section-projects class="section-space mb-[48px] md:mb-[124px]" />
   <div class="section-space" />
   <MainFooter class="section-space mb-[48px] md:mb-[124px]" />
+  <modal-all />
 </template>
 
 <script setup>
@@ -19,6 +20,8 @@ import MainFooter from '~/components/main-footer.vue'
 
 const isVisible = ref(true)
 let lastScroll = 0
+
+useNoScrollBody()
 
 const handleScroll = () => {
   const currentScroll = window.scrollY

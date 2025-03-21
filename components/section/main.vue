@@ -25,6 +25,7 @@
       <div class="flex flex-col lg:w-1/2 lg:self-end">
         <button
           class="button-primary lg:button-secondary w-full max-w-[576px] lg:self-end"
+          @click="openModal('contact')"
         >
           Связаться с нами
         </button>
@@ -39,7 +40,11 @@
   </section>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useModalsStore } from '@/store'
+
+const { openModal } = useModalsStore()
+</script>
 
 <style scoped>
 img {

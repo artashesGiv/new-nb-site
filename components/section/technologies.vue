@@ -24,6 +24,7 @@
     </div>
     <button
       class="button-primary max-w-[550px] mx-auto mt-[24px] md:mt-[124px]"
+      @click="openModal('contact')"
     >
       Связаться с нами
     </button>
@@ -32,6 +33,8 @@
 </template>
 
 <script setup lang="ts">
+import { useModalsStore } from '~/store'
+
 const technologyList = [
   [
     {
@@ -107,8 +110,10 @@ const technologyList = [
     },
   ],
 ]
+
+const { openModal } = useModalsStore()
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 
 </style>

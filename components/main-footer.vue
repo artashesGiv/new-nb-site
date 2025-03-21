@@ -1,5 +1,5 @@
 <template>
-  <footer class="section-container">
+  <footer id="contacts" class="section-container">
     <div class="h-px w-full mb-[24px] bg-main-gray" />
     <div class=" grid grid-cols-1 xl:grid-cols-[1fr_2fr] gap-[32px] footer-container">
       <div>
