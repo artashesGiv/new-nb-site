@@ -5,19 +5,19 @@
       <div>
         <LeafletMap />
       </div>
-      <div class="flex flex-col gap-[32px] sm:gap-[64px]">
-        <div class="flex flex-col sm:flex-row justify-between gap-[16px]">
-          <div class="flex flex-col gap-[16px] sm:gap-[32px] my-text-s">
+      <div class="flex flex-col items-center md:items-start gap-[32px] sm:gap-[64px]">
+        <div class="flex flex-col items-center md:items-start sm:flex-row justify-between w-full gap-[16px]">
+          <div class="flex flex-col items-center  text-center md:items-start gap-[16px] sm:gap-[32px] my-text-s">
             <span>г. Казань, ул. Односторонка Ноксинская, д.1, помещ. 9</span>
             <span class="select-none">+7 (908) 334 09 19</span>
             <span class="select-none underline">info@it-nb.ru</span>
           </div>
           <img class="w-[184px]" src="/images/footer/qr.png" alt="qr" />
         </div>
-        <div class="flex flex-col sm:flex-row justify-between gap-[16px]">
-          <div class="flex flex-col gap-[16px] my-text-s">
-            <span class="my-text-m">Акционерное общество «Нью Бренд» (АО «Нью Бренд»)</span>
-            <div class="flex flex-row flex-wrap gap-[10px] text-[14px] sm:text-[20px] text-dark-gray">
+        <div class="flex flex-col items-center md:items-start sm:flex-row justify-between w-full gap-[16px]">
+          <div class="flex flex-col items-center md:items-start gap-[16px] my-text-s">
+            <span class="my-text-m  text-center md:text-start">Акционерное общество «Нью Бренд» (АО «Нью Бренд»)</span>
+            <div class="flex flex-row justify-center md:justify-start flex-wrap gap-[10px] text-[14px] sm:text-[20px] text-dark-gray">
               <span>ИНН 1686032615</span>
               <span>КПП 168601001</span>
               <span>ОГРН 1231600054751</span>
