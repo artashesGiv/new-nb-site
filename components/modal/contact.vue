@@ -46,6 +46,7 @@
 import { Form } from 'vee-validate'
 import * as yup from 'yup'
 
+const config = useRuntimeConfig()
 onMounted(() => {
   initFields()
 })
@@ -80,8 +81,26 @@ function initFields() {
   }
 }
 
-const onSubmit = handleSubmit(values => {
+const onSubmit = handleSubmit(async values => {
   console.log(values)
+  try {
+    const response = await fetch(`${config.public.baseUrl}/feedback`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(values),
+    })
+
+    if (!response.ok) {
+      throw new Error('Ошибка при отправке формы')
+    }
+
+    const result = await response.json()
+    console.log('Успешно отправлено:', result)
+  } catch (error) {
+    console.error('Ошибка:', error)
+  }
 })
 </script>
 

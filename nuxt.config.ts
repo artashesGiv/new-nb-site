@@ -37,4 +37,10 @@ export default defineNuxtConfig({
       'Nunito Sans': '200..700',
     },
   },
+
+  runtimeConfig: {
+    public: {
+      baseUrl: 'https://it-nb.ru',
+    },
+  }
 })
